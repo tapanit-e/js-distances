@@ -124,12 +124,17 @@ var distances = (() => {
 			return comparison.length;
 		else if (! comparison.length)
 			return string.length;
-
-    		return Math.min(
-        		levenshtein(string.substr(1), comparison) + 1,
-        		levenshtein(comparison.substr(1), string) + 1,
-        		levenshtein(string.substr(1), comparison.substr(1)) + (string.charAt(0) !== comparison.charAt(0) ? 1 : 0)
-    		) + 1;
+			
+		var cost = string.charAt(string.length - 1) === comparison.charAt(comparison.length - 1) ?
+			0 : 1;
+			
+		return Math.min(
+		
+			levenshtein(string.substring(0, string.length - 1), comparison) + 1,
+			levenshtein(string, comparison.substring(0, comparison.length - 1)) + 1,
+			levenshtein(string.substring(0, string.length - 1), comparison.substring(0, comparison.length - 1)) + cost
+		
+		);
 
 	};
 	
