@@ -118,6 +118,21 @@ var distances = (() => {
 	
 	};
 	
+	var levenshtein = (string, comparison) => {
+		
+		if (! string.length)
+			return comparison.length;
+		else if (! comparison.length)
+			return string.length;
+
+    		return Math.min(
+        		levenshtein(string.substr(1), comparison) + 1,
+        		levenshtein(comparison.substr(1), string) + 1,
+        		levenshtein(string.substr(1), comparison.substr(1)) + (string.charAt(0) !== comparison.charAt(0) ? 1 : 0)
+    		) + 1;
+
+	};
+	
 	return {
 	
 		jaccard: 	jaccard,
@@ -127,8 +142,9 @@ var distances = (() => {
 		euclidean: 	euclidean,
 		sqEuclidean: 	sqEuclidean,
 		chebyshev: 	chebyshev,
-		hamming: 	hamming
-	
+		hamming: 	hamming,
+		levenshtein: 	levenshtein
+		
 	};	
 
 
