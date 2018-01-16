@@ -1,2 +1,9 @@
-# js-distances
-Plain JavaScript implementation of distance metrics
+Plain JavaScript implementation of distance metrics includes:
+
++ Euclidean distance and squared euclidean distace
++ Cosine distance
++ Manhattan distance
++ Hamming distance
++ Minkowski distance
++ Chebyshev distance
++ Jaccard distance
