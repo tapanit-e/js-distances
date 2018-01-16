@@ -7,3 +7,4 @@ Plain JavaScript implementation of distance metrics includes:
 + Minkowski distance
 + Chebyshev distance
 + Jaccard distance
++ Levenshtein distance
