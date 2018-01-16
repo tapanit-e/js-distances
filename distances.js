@@ -90,10 +90,15 @@ var distances = (() => {
 			
 		var largest = 0;
 		
-		for (var i = 0; i < vector.length; i++)
-			if (Math.abs(vector[i] - comparison[i]) > largest)
-				largest = Math.abs(vector[i] - comparison[i]);
-				
+		for (var i = 0; i < vector.length; i++) {
+		
+			var distAbs = Math.abs(vector[i] - comparison[i]);
+			
+			if (distAbs > largest)
+				largest = distAbs;
+			
+		}
+			
 		return largest;
 	
 	};
