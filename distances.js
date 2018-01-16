@@ -123,14 +123,14 @@ var distances = (() => {
 	
 	return {
 	
-		jaccard: jaccard,
-		minkowski: minkowski,
-		manhattan: manhattan,
-		cosine: cosine,
-		euclidean: euclidean,
-		sqEuclidean: sqEuclidean,
-		chebyshev: chebyshev,
-		hamming: hamming
+		jaccard: 	jaccard,
+		minkowski: 	minkowski,
+		manhattan: 	manhattan,
+		cosine: 	cosine,
+		euclidean: 	euclidean,
+		sqEuclidean: 	sqEuclidean,
+		chebyshev: 	chebyshev,
+		hamming: 	hamming
 	
 	};	
 
