@@ -1,19 +1,5 @@
 var distances = (() => {
 
-	var euclidean = (vector, comparison) => {
-	
-		if (vector.length !== comparison.length)
-			throw new Error('Vector lengths are not equal');
-			
-		var sum = 0;	
-			
-		for (var i = 0; i < vector.length; i++)
-			sum += Math.pow(vector[i] - comparison[i], 2);
-			
-		return Math.sqrt(sum);
-	
-	};
-	
 	var sqEuclidean = (vector, comparison) => {
 	
 		if (vector.length !== comparison.length)
@@ -25,6 +11,12 @@ var distances = (() => {
 			sum += Math.pow(vector[i] - comparison[i], 2);
 			
 		return sum;
+	
+	};
+	
+	var euclidean = (vector, comparison) => {
+			
+		return Math.sqrt(sqEuclidean(vector, comparison));
 	
 	};
 	
