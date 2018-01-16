@@ -82,8 +82,8 @@ var distances = (() => {
 		if (vector.length !== comparison.length)
 			throw new Error('Vector lengths are not equal');
 	
-		var a = new Set(input[i]);
-		var b = new Set(output[i]);
+		var a = new Set(vector[i]);
+		var b = new Set(comparison[i]);
 		
 		var intersection = new Set([...a].filter(i => b.has(i)));
 		
