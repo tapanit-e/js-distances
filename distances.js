@@ -34,18 +34,18 @@ var distances = (() => {
 			throw new Error('Vector lengths are not equal');
 	
 		var a = 0,
-        	b = 0,
-        	c = 0;
+        	    b = 0,
+        	    c = 0;
 
-        for (var i = 0; i < vector.length; i++) {
+        	for (var i = 0; i < vector.length; i++) {
 
-        	a += Math.pow(vector[i], 2);
-            b += Math.pow(comparison[i], 2);
-            c += vector[i] * comparison[i];
+        		a += Math.pow(vector[i], 2);
+            		b += Math.pow(comparison[i], 2);
+            		c += vector[i] * comparison[i];
 
-        }
+        	}
 
-        return 1 - (c / (Math.sqrt(a) * Math.sqrt(b)));
+        	return 1 - (c / (Math.sqrt(a) * Math.sqrt(b)));
 	
 	};
 	
